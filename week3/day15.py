@@ -65,3 +65,5 @@ for i in range(n):
 
 print("タスクリストは", task_list, "です")
 print("完了リストは", done_list, "です")
+
+"一部修正しました"
