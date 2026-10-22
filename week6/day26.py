@@ -1,0 +1,23 @@
+import sqlite3
+
+conn = sqlite3.connect("test.db")
+cur = conn.cursor()
+cur.execute("DROP TABLE IF EXISTS employees")
+cur.execute("CREATE TABLE employees (id INTEGER, name TEXT, department TEXT, salary INTEGER)")
+cur.execute("INSERT INTO employees VALUES(1, '田中', '営業', 300000)")
+cur.execute("INSERT INTO employees VALUES(2, '佐藤', '開発', 350000)")
+cur.execute("INSERT INTO employees VALUES(3, '鈴木', '営業', 280000)")
+cur.execute("INSERT INTO employees VALUES(4, '高橋', '開発', 400000)")
+cur.execute("INSERT INTO employees VALUES(5, '伊藤', '総務', 260000)")
+conn.commit()
+#cur.execute("SELECT * FROM employees")
+#cur.execute("SELECT name, salary FROM employees")
+#cur.execute("SELECT * FROM employees WHERE department = '開発'")
+#cur.execute("SELECT name, salary FROM employees WHERE salary > 300000")
+#cur.execute("SELECT * FROM employees WHERE name LIKE '田%'")
+#cur.execute("SELECT name, salary FROM employees ORDER BY salary DESC")
+cur.execute("SELECT name, salary FROM employees ORDER BY salary DESC LIMIT 3")
+
+rows = cur.fetchall()
+print(rows)
+conn.close()
