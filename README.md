@@ -10,6 +10,7 @@
 | `week3/` | データ構造（スタック・キュー）、木構造・再帰、良いコードの原則 |
 | `week4/` | オブジェクト指向（クラス・継承・カプセル化）、pytest、デバッガ |
 | `week5/` | C言語の入門（`day21_*.c`）、成果物の簡易家計簿（`kakeibo/`） |
+| `week6/` | SQL基礎（SQLite：SELECT・JOIN・集計・データ更新）、Docker基礎（Dockerfileで家計簿をコンテナ化） |
 
 ## 成果物
 
@@ -23,4 +24,12 @@ source venv/bin/activate
 pip install pytest
 cd week5/kakeibo
 pytest -v
+```
+
+## 動かし方（Docker）
+
+```bash
+cd week6/day29
+docker build -t kakeibo-app .
+docker run --rm kakeibo-app
 ```
