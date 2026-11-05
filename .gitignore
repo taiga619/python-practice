@@ -6,3 +6,6 @@ week5/day21_2
 week5/day21_3
 week5/kakeibo/data.json
 *.db
+week7/*
+!week7/*.c
+a.out
