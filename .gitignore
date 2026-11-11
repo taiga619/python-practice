@@ -9,3 +9,5 @@ week5/kakeibo/data.json
 week7/*
 !week7/*.c
 a.out
+*.o
+week8/*/app
